@@ -1,12 +1,10 @@
 #include "calculadora.h"
-#include <vector>
 #include <stdexcept>
-#include <iostream>
 
 using namespace std;
 
 int calculadora::getTamanhoMemoria(){
-    return memoria.size();
+    return memoria.size();  
 }
 
 int calculadora::adicionar(int x,int y){
@@ -36,7 +34,6 @@ float calculadora::somarMemoria(){
     if(!memoria.empty()){
         float resultado = 0;
         for(vector<float>::iterator it = memoria.begin(); it < memoria.end(); it++){
-            cout << *it << " ";
             resultado += *it;
         }
         return resultado;
