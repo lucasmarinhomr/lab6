@@ -17,3 +17,6 @@ calculadoraTeste.o: calculadoraTeste.cpp calculadora.h
 
 clean:
 	$(RM) lab6 TesteLab6
+
+tests:
+	./testeLab6
