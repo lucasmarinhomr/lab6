@@ -1,19 +1,18 @@
-name: CI - Calculadora C++
-
+name: CI CALCULADORA C++
 on:
   push:
-      branches: [ main ]
+    branches: [ main ]
   pull_request:
-      branches: [ main ]
-
+    branches: [ main ]
+    
 jobs:
-  build-and-test:
-      runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - name: install cppunit
+  build_and_test:
+    runs-on:  ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install CppUnit
       run: sudo apt install -y libcppunit-dev
-      - name: make
+    - name: makefile
       run: make
-      - name: make test
-      run: make test
+    - name: makefile tests
+      run: make tests
